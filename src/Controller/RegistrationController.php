@@ -83,9 +83,7 @@ class RegistrationController extends AbstractController
         } catch (VerifyEmailExceptionInterface $exception) {
             $this->addFlash('verify_email_error', $exception->getReason());
 
-            return $this->redirectToRoute('hom
-
-            e');
+            return $this->redirectToRoute('home');
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
